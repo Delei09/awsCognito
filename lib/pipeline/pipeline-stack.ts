@@ -24,7 +24,7 @@ export class PipelineStack extends cdk.Stack {
           crossAccountKeys: true,
           synth: new cdk_pipeline.ShellStep('Synth', {
             input: cdk_pipeline.CodePipelineSource
-              .gitHub('Cristianoaf81GIT/Cognito_icc_example', props.branch),
+              .gitHub('Delei09/awsCognito', props.branch),
             commands: [
               'npm ci',
               'npm run build',
@@ -35,6 +35,6 @@ export class PipelineStack extends cdk.Stack {
 
     // add stage here
 
-    
+
   }
 }

@@ -11,21 +11,21 @@ const app = new cdk.App();
 
 new PipelineStack(app, 'CognitoDevPipelineStack', {
   branch: 'dev',
-  awsRegion: `${process.env.AWS_REGION}`,
-  awsAccount: `${process.env.AWS_ACCOUNT_DEV}`,
+  awsRegion: "us-west-1" ,
+  awsAccount: "723694120505",
   env: {
-    account: `${process.env.AWS_ACCOUNT_MAIN_ID}`,
-    region: `${process.env.AWS_REGION}`
+    account: "349225300597",
+    region: "us-west-1"
   }
 });
 
 new PipelineStack(app, 'CognitoProdPipelineStack', {
   branch: 'prod',
-  awsRegion: `${process.env.AWS_REGION}`,
-  awsAccount: `${process.env.AWS_ACCOUNT_PROD}`,
+  awsRegion: "us-west-1" ,
+  awsAccount: "980373638480",
   env: {
-    account: `${process.env.AWS_ACCOUNT_MAIN_ID}`,
-    region: `${process.env.AWS_REGION}`
+    account: "349225300597",
+    region: "us-west-1"
   }
 });
 
