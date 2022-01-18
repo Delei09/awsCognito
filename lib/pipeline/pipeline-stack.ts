@@ -33,7 +33,17 @@ export class PipelineStack extends cdk.Stack {
           })
       });
 
-    // add stage here
+     //Add the stage here!
+        // const cognitoStage = new CognitoStage( this, props.branch.concat("Stage") , {
+        //     branch : props.branch ,
+        //     env: {
+        //         account: props.awsAccount ,
+        //         region: props.awsRegion
+        //     }
+        // })
+
+        // pipeline.addStage( cognitoStage )
+
 
 
   }
